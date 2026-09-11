@@ -37,7 +37,8 @@ export default async function PaginaCardapio({ searchParams }) {
       </div> 
         
       {produtosFiltrados.length === 0 ? ( 
-        <div className="text-center py-20 border-2 border-dashed border-gray-100 rounded-3xl"> 
+        <div className="text-center py-20 border-2 border-dashed border-gray-100 
+rounded-3xl"> 
           <p className="text-gray-400 text-xl">Nenhum prato encontrado para "{query}"</p> 
           <Link href="/cardapio" className="text-orange-600 underline mt-2 block">Limpar busca</Link> 
         </div> 
@@ -55,7 +56,9 @@ export default async function PaginaCardapio({ searchParams }) {
                 /> 
                 {prato.destacado && ( 
                   <span className="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg"> 
-                    ESTRELA DA CASA ⭐
+                    ESTRELA DA CASA 
+⭐
+ 
                   </span> 
                 )} 
               </div> 

@@ -55,7 +55,9 @@ export default async function PaginaCardapio({ searchParams }) {
                 /> 
                 {prato.destacado && ( 
                   <span className="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg"> 
-                    ESTRELA DA CASA ⭐
+                    ESTRELA DA CASA 
+⭐
+ 
                   </span> 
                 )} 
               </div> 

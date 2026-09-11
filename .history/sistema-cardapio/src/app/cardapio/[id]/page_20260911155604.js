@@ -34,7 +34,8 @@ export default async function DetalhePrato({ params }) {
  
         {/* Lado Direito: Informações da API */} 
         <div className="flex flex-col justify-center"> 
-          <span className="text-orange-600 font-semibold uppercase tracking-widest text-sm"> 
+          <span className="text-orange-600 font-semibold uppercase tracking-widest 
+text-sm"> 
             {prato.categoria} 
           </span> 
           <h1 className="text-5xl font-bold text-gray-800 mt-2">{prato.nome}</h1> 
