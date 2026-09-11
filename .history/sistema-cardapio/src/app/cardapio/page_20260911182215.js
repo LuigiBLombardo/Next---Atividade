@@ -3,10 +3,6 @@ import BotaoFavorito from "@/components/BotaoFavorito";
 import Link from 'next/link'; 
 import Busca from "@/components/Busca"; 
  
-export const metadata = { 
-  title: "Cardápio Completo", 
-  description: "Explore nossa seleção de Entradas, Pratos Principais e Sobremesas exclusivas.", 
-}; 
 export default async function PaginaCardapio({ searchParams }) { 
    
   const query = (await searchParams)?.busca || ""; 

@@ -7,11 +7,6 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 
-export const metadata = { 
-        title: "Nosso Restaurante", 
-        description: "Cardápio digital do restaurante", 
-};
-
 export default function RootLayout({ children }) {
     return (
         <html lang="pt-br" className={`${inter.variable} ${montserrat.variable}`}>
@@ -22,4 +17,16 @@ export default function RootLayout({ children }) {
             </body>
         </html>
 );
-} 
+}
+export const metadata = { 
+        title: "Nosso Restaurante", 
+        description: "Cardápio digital do restaurante", 
+}; 
+
+export default function RootLayout({ children }) { 
+    return ( 
+        <html lang="pt-br"> 
+            <body className={inter.className}>{children}</body> 
+        </html> 
+); 
+}

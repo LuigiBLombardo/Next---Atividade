@@ -5,7 +5,7 @@ import BotaoFavorito from "@/components/BotaoFavorito";
 export async function generateMetadata({ params }) { 
   const { id } = await params; 
  
-  
+  // Buscamos os dados do prato para usar no SEO 
   const res = await fetch(`https://api-restaurante-5iqb.onrender.com/api/produtos/${id}`); 
   const prato = await res.json(); 
  

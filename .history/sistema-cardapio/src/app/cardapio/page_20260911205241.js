@@ -5,7 +5,8 @@ import Busca from "@/components/Busca";
  
 export const metadata = { 
   title: "Cardápio Completo", 
-  description: "Explore nossa seleção de Entradas, Pratos Principais e Sobremesas exclusivas.", 
+  description: "Explore nossa seleção de Entradas, Pratos Principais e Sobremesas 
+exclusivas.", 
 }; 
 export default async function PaginaCardapio({ searchParams }) { 
    

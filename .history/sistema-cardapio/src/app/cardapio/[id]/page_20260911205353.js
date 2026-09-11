@@ -2,21 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link'; 
 import BotaoFavorito from "@/components/BotaoFavorito"; 
  
-export async function generateMetadata({ params }) { 
-  const { id } = await params; 
- 
-  
-  const res = await fetch(`https://api-restaurante-5iqb.onrender.com/api/produtos/${id}`); 
-  const prato = await res.json(); 
- 
-  return { 
-    title: prato.nome, 
-    description: prato.descricao, 
-    openGraph: { 
-      images: [prato.imagem], 
-    }, 
-  }; 
-}
 export default async function DetalhePrato({ params }) { 
   const { id } = await params; 
  
