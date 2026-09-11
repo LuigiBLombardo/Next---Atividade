@@ -8,8 +8,9 @@ export default function PaginaNovoPrato() {
       <form action={cadastrarPrato} className="flex flex-col gap-4"> 
 
         <input name="nome" placeholder="Nome do Prato" required className="p-3 border rounded-xl" /> 
-
-        <textarea name="descricao" placeholder="Descrição completa" required className="p-3 border rounded-xl h-32" /> 
+        
+        <textarea name="descricao" placeholder="Descrição completa" required 
+className="p-3 border rounded-xl h-32" /> 
          
         <select name="categoria" required className="p-3 border rounded-xl bg-white"> 
           
