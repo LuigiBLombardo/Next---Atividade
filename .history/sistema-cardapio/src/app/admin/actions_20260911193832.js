@@ -47,11 +47,13 @@ export async function editarPrato(id, formData) {
   revalidatePath(`/cardapio/${id}`); 
   redirect("/cardapio"); 
 } 
-  
+ 
+// --- AÇÃO DE EXCLUIR --- 
 export async function excluirPrato(id) { 
   await fetch(`https://api-restaurante-5iqb.onrender.com/api/produtos/${id}`, { 
     method: "DELETE", 
   }); 
  
   revalidatePath("/cardapio"); 
+  // Não usamos redirect aqui pois a ação será chamada de dentro da lista 
 } 

@@ -54,4 +54,5 @@ export async function excluirPrato(id) {
   }); 
  
   revalidatePath("/cardapio"); 
+  // Não usamos redirect aqui pois a ação será chamada de dentro da lista 
 } 
