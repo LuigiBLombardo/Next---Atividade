@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import BotaoFavorito from "@/components/BotaoFavorito";
+import Link from 'next/link';
 
 export default async function PaginaCardapio() {
+
+await new Promise((resolve) => setTimeout(resolve, 3000));  
 
 const resposta = await fetch('https://api-restaurante-5iqb.onrender.com/api/produtos', {
 next: { revalidate: 60 }
@@ -51,10 +54,9 @@ return (
         </div>
         <div className="p-6 flex flex-col flex-grow">
             <div className="flex justify-between items-start mb-2">
-                <h2 className="text-xl font-bold text-gray-800">{prato.nome}</h2>
-                <span className="text-xs font-semibold text-orange-600 uppercase tracking-wider">
-                    {prato.categoria}
-                </span>
+                <Link href={`/cardapio/${prato.id}`} className="hover:opacity-95 transition-opacity"> 
+                    <h2 className="text-xl font-bold text-gray-800">{prato.nome}</h2> 
+                </Link>
             </div>
             <p className="text-gray-500 text-sm mb-6 line-clamp-2">
                 {prato.descricao}
