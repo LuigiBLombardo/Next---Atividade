@@ -37,9 +37,7 @@ export default async function DetalhePrato({ params }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4"> 
         {/* Lado Esquerdo: Imagem Otimizada */} 
         <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"> 
-          <Image  
-            src={prato.imagem}  
-            alt={prato.nome}  
+          <Image src={prato.imagem} alt={prato.nome}  
             fill  
             className="object-cover" 
             priority  
