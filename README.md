@@ -130,14 +130,6 @@ A aplicação sobe por padrão em `http://localhost:3000`.
 | `/admin/novo-prato` | Cadastro de novo prato | Protegido |
 | `/admin/editar/{id}` | Edição de prato | Protegido |
 
-## 🐞 Problemas conhecidos
-
-- **Login não é seguro**: ver seção de Autenticação acima.
-- **`Busca.js`**: a `className` do input de busca tem uma aspa extra (`className='"w-full ...'`), o que insere um caractere inválido no início da classe e pode quebrar parte da estilização.
-- **`PratoCard.js` e `Banner.js` parecem não utilizados**: a listagem em `/cardapio` monta o card manualmente em vez de usar o componente `PratoCard`, e nenhuma página mostrada importa `Banner`. Vale avaliar se são componentes legados ou se ainda serão integrados.
-- **URL da API duplicada em vários arquivos**: ver seção de Integração com API acima.
-- **`BotaoFavorito`**: o estado de favorito é local ao componente e não é persistido (recarregar a página perde o favorito).
-
 ## 🚧 Roadmap
 
 - [ ] Implementar autenticação real no login/middleware
